@@ -1,0 +1,50 @@
+{
+  "name": "@trysac/mcp-schema-lint",
+  "version": "0.0.0",
+  "description": "Lint MCP tool definitions against the 2025-11-25 tool name rules, input schema structure, description quality and token budgets, with text and JSON reports",
+  "license": "MIT",
+  "author": "Miguel Gomez",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trysac/u023-mcp-schema-lint.git"
+  },
+  "homepage": "https://github.com/Trysac/u023-mcp-schema-lint#readme",
+  "bugs": {
+    "url": "https://github.com/Trysac/u023-mcp-schema-lint/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "biome ci .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --coverage",
+    "check": "node scripts/check.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.4",
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.0.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
