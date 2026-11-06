@@ -9,4 +9,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- Added the `@trysac/mcp-schema-lint` library and CLI: ten lint rules for MCP tool names, input schemas, descriptions and token budgets, with text and JSON reports.
 - Initial project structure from the factory utility template.
