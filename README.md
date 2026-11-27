@@ -1,7 +1,6 @@
 # mcp-schema-lint
 
-[![npm version](https://img.shields.io/npm/v/@trysac/mcp-schema-lint.svg)](https://www.npmjs.com/package/@trysac/mcp-schema-lint)
-[![license: MIT](https://img.shields.io/npm/l/@trysac/mcp-schema-lint.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/Trysac/u023-mcp-schema-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/Trysac/u023-mcp-schema-lint/actions/workflows/ci.yml)
 
 Lint MCP tool definitions against the 2025-11-25 tool name rules, input schema structure, description quality and token budgets, with text and JSON reports
@@ -12,9 +11,15 @@ MCP tools with vague descriptions, invalid names, untyped parameters or huge sch
 
 ## Install
 
+Not published to npm yet. Build it from a clone, then install it from the local path:
+
 ```sh
-npm install @trysac/mcp-schema-lint
+git clone https://github.com/Trysac/u023-mcp-schema-lint.git
+cd u023-mcp-schema-lint && npm ci && npm run build
+cd ../your-project && npm install ../u023-mcp-schema-lint
 ```
+
+Imports keep the package name: `import { ... } from "@trysac/mcp-schema-lint"`.
 
 Requires Node.js 20 or newer. The package ships ES modules with TypeScript declarations and has no runtime dependencies. The library in `src/index.ts` does not import any `node:` module, so it also runs in browsers.
 
